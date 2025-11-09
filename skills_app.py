@@ -9,7 +9,7 @@ def homepage():
         "homepage.html",
         context={"title": "Homepage", "test": "TEST"},
         pagetitle="Homepage",
-        testing="testing",
+        testing="homepage testing",
     )
 
 
@@ -18,7 +18,7 @@ def about():
     return render_template(
         "about.html",
         pagetitle="About",
-        testing="testing",
+        testing="about testing",
     )
 
 
@@ -27,7 +27,7 @@ def skills():
     return render_template(
         "skills.html",
         pagetitle="Skills",
-        testing="testing",
+        testing="skills testing",
     )
 
 
