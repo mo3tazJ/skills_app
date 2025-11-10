@@ -8,13 +8,27 @@
         {% if custom_css %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/' + custom_css + '.css') }}">
         {% endif %}
-
+        <link rel="icon" href="coder.png">
         {% block style %}
         {% endblock %}
     </head>
     <body>
+        <header>
+        
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+        </header>
         {% block body %}
         {% endblock %}
+        <main></main>
+        <footer>
+        <p>&copy; 2024 MJ Software By <b>ENG. Moutaz Jnoub</b>. All rights reserved.</p>
+        </footer>
         <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
