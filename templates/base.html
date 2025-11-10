@@ -5,17 +5,22 @@
         <title>{{ pagetitle }}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css')}}">
+        {% if custom_css %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/' + custom_css + '.css') }}">
+        {% endif %}
+
+        {% block style %}
+        {% endblock %}
     </head>
     <body>
         {% block body %}
-
         {% endblock %}
-        <br>
+        <!-- <br>
         <i><b><p>Base file integration</p></b></i>
         <b><p>testing file url generating</p></b>
-        <p>{{ url_for('static', filename='Test' ) }}</p>  <!-- testing file url generating  -->
+        <p>{{ url_for('static', filename='Test' ) }}</p> 
         <b><p>testing context</p></b>
-        <p>{{ testing }}</p>  <!-- testing context  -->
+        <p>{{ testing }}</p>  -->
 
     </body>
 </html>
