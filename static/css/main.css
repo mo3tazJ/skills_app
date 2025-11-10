@@ -1,3 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: aquamarine;
+    background-color: #e3eff5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.page-head,
+.page-description {
+    text-align: center;
+}
+
+.page-head {
+    font-size: 40px;
+    color: rgb(2, 2, 78);
+    margin: 20px 10px;
+}
+.page-description {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(47, 0, 0);
+    margin: 10px 0px 40px;
 }
