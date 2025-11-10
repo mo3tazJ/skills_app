@@ -10,15 +10,7 @@ def homepage():
         context={"title": "Homepage", "test": "TEST"},
         pagetitle="Homepage",
         testing="homepage testing",
-    )
-
-
-@skills_app.route("/about")
-def about():
-    return render_template(
-        "about.html",
-        pagetitle="About",
-        testing="about testing",
+        custom_css="home",
     )
 
 
@@ -28,6 +20,25 @@ def skills():
         "skills.html",
         pagetitle="Skills",
         testing="skills testing",
+        custom_css="skills",
+    )
+
+
+@skills_app.route("/add")
+def add():
+    return render_template(
+        "add.html",
+        pagetitle="Add Skill",
+        custom_css="add",
+    )
+
+
+@skills_app.route("/about")
+def about():
+    return render_template(
+        "about.html",
+        pagetitle="About",
+        testing="about testing",
     )
 
 
