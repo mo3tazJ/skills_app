@@ -3,6 +3,16 @@ from flask import Flask, render_template
 skills_app = Flask(__name__)
 
 
+skills_list = [
+    ("Python", 95),
+    ("Django", 90),
+    ("HTML", 85),
+    ("CSS", 80),
+    ("JS", 75),
+    ("Data Science", 90),
+]
+
+
 @skills_app.route("/")
 def homepage():
     return render_template(
@@ -18,9 +28,12 @@ def homepage():
 def skills():
     return render_template(
         "skills.html",
-        pagetitle="Skills",
+        pagetitle="My Skills",
+        page_head="My Current Skills",
+        description="These are My current Skills",
         testing="skills testing",
         custom_css="skills",
+        skills_list=skills_list,
     )
 
 
