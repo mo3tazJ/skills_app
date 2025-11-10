@@ -15,12 +15,7 @@
     <body>
         {% block body %}
         {% endblock %}
-        <!-- <br>
-        <i><b><p>Base file integration</p></b></i>
-        <b><p>testing file url generating</p></b>
-        <p>{{ url_for('static', filename='Test' ) }}</p> 
-        <b><p>testing context</p></b>
-        <p>{{ testing }}</p>  -->
-
+        <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
 </html>
